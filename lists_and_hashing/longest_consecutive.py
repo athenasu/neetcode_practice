@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
+    def longest_consecutive(self, nums: List[int]) -> int:
         """
             Find the longest consecutive element sequence
             Steps:
@@ -18,7 +18,7 @@ class Solution:
 
 my_solution = Solution()
 nums = [0,3,7,2,5,8,4,6,1,1]
-print(my_solution.longestConsecutive(nums))
+print(my_solution.longest_consecutive(nums))
 
 
 # # Solution 1, beat 63.18%

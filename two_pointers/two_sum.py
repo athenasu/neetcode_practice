@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]: 
+    def two_sum(self, numbers: List[int], target: int) -> List[int]: 
         # 57.8% faster, 2 pointers
         numbers.sort()
         right, left = 0, len(numbers) - 1
@@ -30,4 +30,4 @@ numbers = [-1,0]
 target = -1
 # numbers = [2,7,11,15]
 # target = 9
-print(my_solution.twoSum(numbers, target))
+print(my_solution.two_sum(numbers, target))
