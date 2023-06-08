@@ -3,7 +3,7 @@ import collections
 
 
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def is_valid_sudoku(self, board: List[List[str]]) -> bool:
         """
             Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
                 1. Each row must contain the digits 1-9 without repetition.
@@ -38,7 +38,7 @@ board2 = [["8","3",".",".","7",".",".",".","."]
 
 
 my_solution = Solution()
-print(my_solution.isValidSudoku(board1))
+print(my_solution.is_valid_sudoku(board1))
 
 
 

@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def top_k_frequent(self, nums: List[int], k: int) -> List[int]:
         # creates a list of empty lists of len(nums) + 1 : freq = [[], [], [], [], [], [], []]
         
 
@@ -23,7 +23,7 @@ my_solution = Solution()
 nums = [1,1,1,2,2,3]
 k = 2
 
-print(my_solution.topKFrequent(nums, k))
+print(my_solution.top_k_frequent(nums, k))
 
 
 # Solution 1

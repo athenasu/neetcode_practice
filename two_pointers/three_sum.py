@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def three_sum(self, nums: List[int]) -> List[List[int]]:
         # Solution 2
         # 3 pointers, one main, 2 from ends of the list
         pass
@@ -15,7 +15,7 @@ my_solution = Solution()
 # nums = [0,0,0]
 # nums = [0,1,1]
 nums = [-1,0,1,2,-1,-4]
-print(my_solution.threeSum(nums))
+print(my_solution.three_sum(nums))
 
 
 # Solution 1: takes too long

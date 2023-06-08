@@ -1,5 +1,5 @@
 class Solution(object):
-    def isAnagram(self, s, t):
+    def is_anagram(self, s, t):
         """
         :type s: str
         :type t: str
@@ -11,4 +11,4 @@ s = 'test'
 t = 'ttse'
 
 my_solution = Solution()
-print(my_solution.isAnagram(s, t))
+print(my_solution.is_anagram(s, t))
