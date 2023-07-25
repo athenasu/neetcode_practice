@@ -3,18 +3,45 @@ from typing import List
 
 class Solution:
     def three_sum(self, nums: List[int]) -> List[List[int]]:
+        """
+            Process a list of numbers in sets of 3. The sum of 3 numbers = 0
+            Return the list of numbers
+            Note: cannot have duplicate lists
+        """
+        target = 0
+        results = []
         # Solution 2
-        # 3 pointers, one main, 2 from ends of the list
-        pass
-
-
+        # 3 pointers, one main, 2 from ends of the list (similar to two sum)
+        for i, num in enumerate(nums):
+            # skip the positive numbers
+            if num > 0:
+                break
+            
+            # skip duplicate numbers
+            if i > 0 and num == nums[i - 1]:
+                continue
         
-    
+            left, right = i + 1, len(nums) - 1
+            
+            while left > right:
+                current_sum = num + nums[left] + nums[right]
 
+                if current_sum > target:
+                    right -= 1
+                elif current_sum < target:
+                    left += 1
+                else:
+                    results.append([num, nums[left], nums[right]])
+                    left += 1
+            
+            return results
+
+     
+    
 my_solution = Solution()
 # nums = [0,0,0]
 # nums = [0,1,1]
-nums = [-1,0,1,2,-1,-4]
+nums = [-1,2,0,1,2,-1,-4]  # Output = [[-4, 2, 2], [-1, -1, 2], [-1, 0, 1]]
 print(my_solution.three_sum(nums))
 
 
