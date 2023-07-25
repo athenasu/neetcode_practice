@@ -11,13 +11,25 @@ class Solution:
                 3. If the length + the number is in the set, length += 1
                 4. Return longest value
         """
-        pass
+        if len(nums) == 0:
+            return 0
+        if len(nums) == 1:
+            return 1
 
-        
-    
+        longest = 0
+        num_set = set(nums)
+        nums.sort()
+        for num in nums:
+            if num - 1 not in num_set:
+                length = 1
+                while num + length in num_set:
+                    length += 1
+                longest = max(length, longest)
+        return longest
+
 
 my_solution = Solution()
-nums = [0,3,7,2,5,8,4,6,1,1]
+nums = [0,3,7,2,5,8,4,6,1,1] # Output: 9
 print(my_solution.longest_consecutive(nums))
 
 
